@@ -1,11 +1,16 @@
 <?php
+// récupère les datas
 require_once 'data/products.php';
+//récupère le header jusqu'à la balise ouvrante du body
 require_once 'layout/header.php';
 ?>
 
+
+<!-- le contenu de ma page -->
 <h1>Produits</h1>
 
 <section class="container">
+  <!-- boucle qui récupere les donnés dans importées de products.php pour les afficher -->
   <?php foreach ($products as $element) { ?>
     <article class="item">
       <div>
@@ -26,4 +31,5 @@ require_once 'layout/header.php';
   <?php } ?>
 </section>
 
-<?php require_once 'layout/footer.php';
+<!-- fermeture de la balise body et import du footer -->
+<?php require_once 'layout/footer.php';?>
