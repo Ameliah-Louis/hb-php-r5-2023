@@ -5,9 +5,29 @@ html {
   font-size: 18px;
 }
 
+h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  text-transform: uppercase;
+}
+
 h1,
 h2 {
   font-weight: bold;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: auto;
 }
 
 .container {
@@ -49,18 +69,50 @@ h2 {
   font-weight: 300;
 }
 
-.item .content .tags {
+.tags {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
 }
 
-.item .content .tags .tag {
+.tags.center {
+  justify-content: center;
+}
+
+.tags .tag {
   padding: 0.4rem 0.6rem;
+}
+
+.product-container .cover {
+  position: relative;
+  max-width: 800px;
+  text-align: center;
+  margin: auto;
+}
+
+.product-container .cover img {
+  max-width: 100%;
+}
+
+.product-container .cover .price {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: xx-large;
+  font-weight: 400;
+  padding: 1.2rem 2rem;
+  background-color: rgb(255, 81, 0);
+  color: #fff;
 }
 
 @media screen and (min-width: 450px) {
   .container {
     flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  h1 {
+    font-size: 4.2rem;
   }
 }
