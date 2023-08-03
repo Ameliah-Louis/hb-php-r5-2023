@@ -5,6 +5,12 @@ class Product
   private string $name;
   private float $price;
 
+  // Constructeur, appelé automatiquement lorsqu'on utilise new Product(...)
+  public function __construct(string $name)
+  {
+    $this->name = $name;
+  }
+
   // Capacités - Méthodes
   public function getFullPrice(float $taxRate): float
   {
