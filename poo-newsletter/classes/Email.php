@@ -15,4 +15,10 @@ class Email
     }
     $this->emailAddress = $emailAddress;
   }
+
+  public function getDomain(): string
+  {
+    $emailParts = explode('@', $this->emailAddress);
+    return $emailParts[1];
+  }
 }

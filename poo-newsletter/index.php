@@ -1,8 +1,5 @@
 <?php
 
-// Initialisation email
-$email = "";
-
 if (isset($_POST['email'])) { // Formulaire soumis
   require_once 'classes/SpamChecker.php';
   require_once 'classes/Email.php';
@@ -10,7 +7,9 @@ if (isset($_POST['email'])) { // Formulaire soumis
   try {
     $email = new Email($_POST['email']);
     $checker = new SpamChecker();
-    // $isSpam = $checker->isSpam($email);
+    if ($checker->isSpam($email)) {
+      $errorMessage = "Cet email est un spam";
+    }
   } catch (InvalidArgumentException $ex) {
     $errorMessage = $ex->getMessage();
   }
@@ -38,7 +37,7 @@ if (isset($_POST['email'])) { // Formulaire soumis
 
     <form method="POST">
       <label for="email">Email :</label>
-      <input type="email" name="email" id="email" value="<?php echo $email; ?>" />
+      <input type="email" name="email" id="email" value="<?php echo $_POST['email'] ?? ""; ?>" />
 
       <button type="submit">Inscription</button>
     </form>

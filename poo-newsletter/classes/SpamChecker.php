@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/Email.php';
+
 class SpamChecker
 {
   /** @var string[] */
@@ -8,25 +10,12 @@ class SpamChecker
   /**
    * Checks if given email is a spam
    *
-   * @param string $email Email to verify
+   * @param Email $email Email to verify
    * @return boolean true if email is spam, false otherwise
    * @throws InvalidArgumentException if email format is incorrect
    */
-  public function isSpam(string $email): bool
+  public function isSpam(Email $email): bool
   {
-
-    // 1 - Récupérer le domaine de l'email
-    $emailParts = explode('@', $email);
-    $domain = $emailParts[1];
-    // 2 - Vérifier si ce domaine se trouve dans le tableau de spams
-    // --- 1ère méthode
-    // foreach (self::SPAM_DOMAINS as $spamDomain) {
-    //   if ($domain === $spamDomain) {
-    //     return true;
-    //   }
-    // }
-    // return false;
-    // --- 2de méthode
-    return in_array($domain, self::SPAM_DOMAINS);
+    return in_array($email->getDomain(), self::SPAM_DOMAINS);
   }
 }
