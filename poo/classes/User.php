@@ -2,9 +2,27 @@
 
 class User
 {
+  // Membre statique
+  public  const  LEGAL_AGE = 18;
+
+  // Propriétés
   private string $firstname;
   private string $lastname;
   private int    $age;
+
+  public function hasLegalAge(): bool
+  {
+    // --- if-else
+    // if ($this->age >= 18) {
+    //   return true;
+    // } else {
+    //   return false;
+    // }
+    // --- ternaire
+    // return $this->age >= 18 ? true : false;
+    // --- Final
+    return $this->age >= self::LEGAL_AGE;
+  }
 
   public function getFullName(): string
   {
