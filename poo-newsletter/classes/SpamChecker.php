@@ -14,10 +14,7 @@ class SpamChecker
    */
   public function isSpam(string $email): bool
   {
-    // 0 - Vérifier le format de l'email
-    if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
-      throw new InvalidArgumentException("Le format de l'email est incorrect");
-    }
+
     // 1 - Récupérer le domaine de l'email
     $emailParts = explode('@', $email);
     $domain = $emailParts[1];

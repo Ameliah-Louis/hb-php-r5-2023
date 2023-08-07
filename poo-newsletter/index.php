@@ -5,11 +5,12 @@ $email = "";
 
 if (isset($_POST['email'])) { // Formulaire soumis
   require_once 'classes/SpamChecker.php';
-  $email = $_POST['email'];
-  $checker = new SpamChecker();
+  require_once 'classes/Email.php';
 
   try {
-    $isSpam = $checker->isSpam($email);
+    $email = new Email($_POST['email']);
+    $checker = new SpamChecker();
+    // $isSpam = $checker->isSpam($email);
   } catch (InvalidArgumentException $ex) {
     $errorMessage = $ex->getMessage();
   }
