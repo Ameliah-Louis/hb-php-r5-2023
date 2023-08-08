@@ -21,4 +21,9 @@ class Email
     $emailParts = explode('@', $this->emailAddress);
     return $emailParts[1];
   }
+
+  public function getEmailAddress(): string
+  {
+    return $this->emailAddress;
+  }
 }

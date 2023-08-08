@@ -3,14 +3,15 @@
 if (isset($_POST['email'])) { // Formulaire soumis
   require_once 'classes/SpamChecker.php';
   require_once 'classes/Email.php';
+  require_once 'classes/EmailsFile.php';
+  require_once 'classes/Utils.php';
 
   try {
     $email = new Email($_POST['email']);
-    $checker = new SpamChecker();
-    if ($checker->isSpam($email)) {
-      $errorMessage = "Cet email est un spam";
-    }
-  } catch (InvalidArgumentException $ex) {
+    $emailsFile = new EmailsFile(new SpamChecker());
+    $emailsFile->add($email);
+    Utils::redirect('confirm_sub.php');
+  } catch (Exception $ex) {
     $errorMessage = $ex->getMessage();
   }
 }

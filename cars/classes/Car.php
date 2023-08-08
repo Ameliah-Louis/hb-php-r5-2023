@@ -27,7 +27,7 @@ class Car
   public function setName(string $name): self
   {
     if (!$name) {
-      // Exception...
+      throw new InvalidArgumentException("Le nom ne peut être vide");
     }
 
     $this->name = $name;
