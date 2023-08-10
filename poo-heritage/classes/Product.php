@@ -8,6 +8,11 @@ class Product
   ) {
   }
 
+  public function displayInfos(int $flags = 0): void
+  {
+    echo "Coucou, je suis un produit, mon nom est " . $this->name;
+  }
+
   public function getName(): string
   {
     return $this->name;

@@ -11,7 +11,7 @@ class ProductRect extends Product
     parent::__construct($name, $price);
   }
 
-  public function displayInfos(): void
+  public function displayInfos(int $flags = 0): void
   {
     echo "Coucou, je suis rectangulaire, mon prix est " . $this->price . " et ma largeur est " . $this->width;
   }
