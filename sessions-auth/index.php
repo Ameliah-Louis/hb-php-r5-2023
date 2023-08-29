@@ -4,6 +4,8 @@ if (isset($_SESSION['login'])) {
 } else {
   $welcomeMessage = "Bienvenue";
 }
+
+// $welcomeMessage = "Bienvenue" . (isset($_SESSION['login']) ? ", " . $_SESSION['login'] : "");
 ?>
 
 <h1><?php echo $welcomeMessage; ?></h1>

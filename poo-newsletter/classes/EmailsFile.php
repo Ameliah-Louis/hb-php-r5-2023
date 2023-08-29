@@ -11,6 +11,13 @@ class EmailsFile
     $this->emails = file(self::FILE_PATH, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
   }
 
+  /**
+   * Adds a new Email to the file
+   *
+   * @param Email $email
+   * @return void
+   * @throws Exception if email is duplicate or spam
+   */
   public function add(Email $email): void
   {
     // Vérification doublon

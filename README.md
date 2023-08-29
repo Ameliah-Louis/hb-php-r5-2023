@@ -114,3 +114,39 @@ Réaliser un petit système de newsletter :
 Produits rectangulaires et circulaires : [poo-heritage](poo-heritage/)
 
 > Objectifs : Héritage, portée `protected`, mot-clé `static` pour l'interface fluide, abstractions, polymorphisme
+
+### Abstraction, polymorphisme
+
+Users, employés, clients : [poo-users-emp-clients](poo-users-emp-clients/)
+
+> Objectifs : Héritage, classe abstraite, méthode abstraite, [polymorphisme](https://github.com/ld-web/hb-php-r5-2023/blob/master/poo-users-emp-clients/index.php#L26-L39)
+
+> Objectifs : Abstraction, interfaces, polymorphisme
+
+Pressing : [pressing](pressing/)
+
+> Objectifs : Abstraction, interfaces, [select list](pressing/html_functions.php)
+
+## File upload
+
+[file-upload](file-upload/)
+
+> Objectifs : formulaires, [enctype](https://github.com/ld-web/hb-php-r5-2023/blob/master/file-upload/index.php#L27)
+
+## Sessions
+
+[sessions](sessions/)
+
+> Objectifs : Sessions en PHP, retenir de la donnée côté serveur, cookie PHPSESSID
+
+[sessions-auth](sessions-auth/)
+
+> Objectifs : Avant PDO, exemple d'authentification statique, simple, avec enregistrement en session
+
+## PDO
+
+[pdo-intro](pdo-intro/)
+
+> Objectifs : Découverte de la classe PDO pour représenter une connexion à une base de données, DSN, Exceptions
+
+> Objectifs : requêtes non préparées, requêtes préparées

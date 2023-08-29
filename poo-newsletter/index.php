@@ -11,8 +11,11 @@ if (isset($_POST['email'])) { // Formulaire soumis
     $emailsFile = new EmailsFile(new SpamChecker());
     $emailsFile->add($email);
     Utils::redirect('confirm_sub.php');
-  } catch (Exception $ex) {
-    $errorMessage = $ex->getMessage();
+  } catch (InvalidEmailException $ex) {
+    $errorMessage = "Erreur de formatage : " . $ex->getMessage();
+  } catch (Exception) {
+    //$errorMessage = $ex->getMessage();
+    $errorMessage = "Une erreur est survenue";
   }
 }
 ?>
