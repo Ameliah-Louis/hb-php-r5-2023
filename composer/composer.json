@@ -1,0 +1,13 @@
+{
+  "name": "ld-web/composer-intro",
+  "description": "Composer intro for HB Students",
+  "authors": [
+    {
+      "name": "Lucas Delobelle",
+      "email": "lucas@ld-web.net"
+    }
+  ],
+  "require": {
+    "symfony/mailer": "6.2.*"
+  }
+}
