@@ -29,7 +29,7 @@ $stmtInsert->execute([
   $lastname,
   $email,
   $birthDate,
-  $password
+  password_hash($password, PASSWORD_DEFAULT)
 ]);
 
 echo "ok";
