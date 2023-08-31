@@ -1,3 +1,7 @@
 .vscode/
 poo-newsletter/emails.txt
+<<<<<<< HEAD
 /vendor/
+=======
+vendor/
+>>>>>>> 76592b5ab256f30406810ce9a89c8324031fae24

@@ -5,11 +5,22 @@
  */
 function getDbConnection(): PDO
 {
+  $dbSettings = parse_ini_file(__DIR__ . '/../db.ini');
+  // $host = $dbSettings['DB_HOST'];
+  [
+    'DB_HOST' => $host,
+    'DB_PORT' => $port,
+    'DB_NAME' => $dbname,
+    'DB_CHARSET' => $charset,
+    'DB_USER' => $user,
+    'DB_PASSWORD' => $password
+  ] = $dbSettings;
+
   // DSN = Data Source Name
   $pdo = new PDO(
-    "mysql:host=172.18.0.1;port=3640;dbname=hb-php-r5;charset=utf8mb4",
-    'root',
-    'mysqltests',
+    "mysql:host=$host;port=$port;dbname=$dbname;charset=$charset",
+    $user,
+    $password,
     [
       PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
       PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
