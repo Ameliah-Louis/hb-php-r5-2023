@@ -1,0 +1,11 @@
+{
+    "name": "zyrameliah/composer-intro",
+    "description": "composer intro HB",
+    "authors": [
+        {
+            "name": "alouis",
+            "email": "alouis@stagiaire-humanbooster.com"
+        }
+    ],
+    "require": {}
+}
