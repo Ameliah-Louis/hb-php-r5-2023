@@ -1,16 +1,18 @@
 {
-  "name": "ld-web/composer-intro",
-  "description": "Composer intro for HB Students",
-  "authors": [
-    {
-      "name": "Lucas Delobelle",
-      "email": "lucas@ld-web.net"
-    }
-  ],
-  "require": {
+<<<<<<< HEAD
+    "name": "zyrameliah/composer-intro",
+    "description": "composer intro HB",
+    "authors": [
+        {
+            "name": "alouis",
+            "email": "alouis@stagiaire-humanbooster.com"
+        }
+    ],
+    "require": {
     "symfony/mailer": "6.2.*"
   },
   "require-dev": {
     "phpunit/phpunit": "^10.3"
   }
+>>>>>>> 76592b5ab256f30406810ce9a89c8324031fae24
 }
